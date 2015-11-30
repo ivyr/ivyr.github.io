@@ -1,0 +1,436 @@
+/*setting default fonts*/
+* {
+  font-family: 'Lato', sans-serif;
+  color: 4e4e4e;
+}
+
+/*START: Main layout containers*/
+header {
+  border-top: thin solid #909090;
+  border-bottom: 1px solid #BBBBBB;
+  background-color: #f79f36;
+}
+
+section {
+  border-bottom: 1px dashed #BBBBBB;
+}
+
+.last-section {
+  border-bottom: 1px solid #BBBBBB;
+}
+
+footer {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  /*[behavior] setting border-bottom here will have no effect since it was
+  already defined in the container class*/
+  border-bottom: thin solid #909090;
+  background-color: #f79f36;
+}
+
+.container {
+  /*[behavior] inline-block would make the gap between containers gone
+  w/o it there's a gap between containers*/
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-right: thin solid #909090;
+  border-left: thin solid #909090;
+  /*[behavior] removed setting of border-top and border-bottom instead set it
+  inside header, section and footer for each specific behavior setting*/
+  /*background-color: blue;*/
+}
+
+.left-container {
+  display: inline;
+  position: relative;
+  padding: 5px 0 5px 0;
+  margin: 0;
+  /*[behavior] left-container is inside the class container without setting
+  the border-style here it will have a redundant border-bottom setting because
+  element tag for this class is a section in which section is set to have a
+  border-bottom style*/
+  border-style: none;
+  vertical-align: top;
+  overflow: auto;
+  /*background-color: blue;*/
+}
+
+.right-container {
+  padding: 5px 0 5px 0;
+  /*[behavior] see .left-container*/
+  border-style: none;
+  vertical-align: top;
+  overflow: auto;
+  /*background-color: red;*/
+}
+/*END: Main layout containers*/
+
+/*START: Sub-container for a main container divided to 2 sections*/
+/*Sections: #expertise, #experience, #education*/
+.left-container-half {
+  display: inline-block;
+  width: 49%;
+  margin: 10px 0 10px 0;
+  /*background-color: blue;*/
+}
+
+.right-container-half {
+  display: inline-block;
+  width: 50%;
+  margin: 10px 0 10px 0;
+  /*background-color: red;*/
+}
+/*START: Sub-container for a main container divided to 2 sections*/
+
+/*START: Specific left & right sub-container for About section*/
+.left-container-about {
+  display: inline-block;
+  width: 29%;
+  margin: 10px 0 10px 0;
+  /*background-color: pink;*/
+}
+
+.right-container-about {
+  display: inline-block;
+  width: 70%;
+  /*margin: auto;*/
+  margin: 10px 0 10px 0;
+  /*background-color: yellow;*/
+}
+/*END: Specific left & right sub-container for About section*/
+
+/*START: Global classes*/
+/*Section heading for #expertise, #experience*/
+.heading-div {
+  padding-top: 15px;
+}
+
+/*Section: #about, #expertise, #experience, #education, #portfolio*/
+/*this class is matched with h2 tag*/
+.section-heading {
+  position: relative;
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 17px;
+  color: #571609;
+  /*background-color: blue;*/
+}
+
+/*Section heading for sub-container divided to 2 sections*/
+/*Section: #experience, #education*/
+.section-heading-single {
+  margin: -5px 0 0px 15px;
+}
+
+/*Section: #experience, #education*/
+/*this class is matched with h3 tag*/
+.section-subheading {
+  position: relative;
+  /*[behavior] display: inline-block would make the text auto-wrap justify*/
+  display: inline;
+  margin: 0px 0 5px 0px;
+  padding: 0;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: left;
+  /*background-color: pink;*/
+}
+
+.content {
+  margin: 5px 15px 0px 15px;
+  font-weight: 400;
+  font-size: 13px;
+  text-align: justify;
+  color: #000000;
+  /*background-color: pink;*/
+}
+/*END: Global classes*/
+
+/*START: #header specific styles*/
+/*Sections: #header*/
+#name {
+  position: relative;
+  display: block;
+  padding: 13px 30px 0 0px;
+  margin: 0;
+  font-family: 'Satisfy', cursive;
+  font-weight: 700;
+  font-size: 35px;
+  text-align: center;
+  color: #ffffff;
+  /*background-color: pink;*/
+}
+
+#title {
+  position: relative;
+  display: block;
+  padding: 0 0 0 70px;
+  margin-top: -12px;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  /*color: #d5cbcb;*/
+  color: #f9eddf;
+  /*background-color: yellow;*/
+}
+
+/*START: #header navigation style*/
+.nav-list {
+  list-style-type: none;
+  text-align: center;
+  position: relative;
+  display: block;
+  margin: inherit;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #6c6766;
+}
+
+.nav-list-item {
+  display: inline;
+  padding-left: 8px;
+  padding-right: 8px;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+#header a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#header a:hover {
+  text-decoration: underline;
+  font-style: italic;
+}
+
+/*END: #header navigation style*/
+/*END: #header specific styles*/
+
+/*START: #about specific styles*/
+/*Section: #about*/
+.about-subheading {
+  font-weight: 400;
+  font-size: 14px;
+  color: #938e8e;
+  margin: 0 0 0 15px;
+  padding: 0;
+  text-transform: uppercase;
+  /*background-color: red;*/
+}
+
+#about figure {
+  height: 25px;
+  padding: 0 0 0 10px;
+  margin: 5px 0 0 15px;
+  /*background: pink;*/
+}
+
+.icon-round img {
+  position: relative;
+  display: inline;
+  width: 27px;
+  height: 27px;
+  vertical-align: top;
+  margin-top: 5px;
+}
+
+.icon-round a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.icon-heigth img {
+  position: relative;
+  display: inline;
+  vertical-align: bottom;
+  width: 10px;
+  height: 15px;
+  padding-right: 6px;
+  margin: 15px 0 0 0;
+  /*background-color: red;*/
+}
+
+.icon-heigth figcaption {
+  display: inline;
+  margin: 15px 0 0 0;
+  vertical-align: bottom;
+  color: #515151;
+  font-size: 12px;
+  text-align: left;
+  /*background-color: blue;*/
+}
+
+.icon-width img {
+  position: relative;
+  display: inline;
+  vertical-align: center;
+  width: 15px;
+  height: 10px;
+  padding-right: 5px;
+  padding-top: 3px;
+  margin: 15px 0 0 0;
+  /*background-color: blue;*/
+}
+
+.icon-width figcaption {
+  display: inline;
+  vertical-align: bottom;
+  margin: 15px 0 0 0;
+  color: #515151;
+  font-size: 12px;
+  text-align: left;
+  /*background-color: blue;*/
+}
+
+#about-info img {
+  float: left;
+  border-radius: 10%;
+  width: 80px;
+  height: 95px;
+  margin: 1px 10px 1px 15px;
+  box-shadow: 1px 5px 1px 1px #808080;
+}
+/*END: #about specific styles*/
+
+/*START: #expertise specific styles*/
+/*Section: #expertise*/
+.slider {
+  float: right;
+  display: inline-block;
+  height: 10px;
+  width: 250px;
+  margin: -10px 10px 0 0;
+  padding: 0;
+}
+
+.slider-border {
+  position: relative;
+  border-radius: 25px;
+  background-color: #f6d9b7;
+}
+
+.slider-content {
+  position: relative;
+  border-radius: 25px;
+  background-color: #f79f36;
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+}
+
+.slider-beginner {
+  width: 83px;
+}
+
+.slider-intermediate {
+  width: 167px;
+}
+
+.slider-advanced {
+  width: 250px;
+}
+/*END: #expertise specific styles*/
+
+/*START: #experience specific styles*/
+/*Section: #experience*/
+.section-dates {
+  /*float: right;*/
+  display: inline;
+  position: relative;
+  margin: 0px 0 5px 0px;
+  font-weight: lighter;
+  font-size: 13px;
+  text-align: right;
+  /*background-color: red;*/
+}
+/*END: #experience specific styles*/
+
+/*START: #education specific styles*/
+/*Section: #education*/
+.section-dates-edu {
+  display: inline;
+  position: relative;
+  margin-top: 5px 0 -5px 0;
+  /*background-color: red;*/
+}
+
+.section-location {
+  /*margin: 0px 0 15px 0px;*/
+  margin: 0 0 15px 0;
+  padding: 0;
+  font-weight: normal;
+  text-align: left;
+  /*background-color: yellow;*/
+}
+/*END: #education specific styles*/
+
+/*START: #portfolio specific styles*/
+/*Section: #portfolio*/
+#portfolio figure {
+  display: inline-block;
+  width: 220px;
+  height: 115px;
+  text-align: center;
+  /*background-color: pink;*/
+}
+
+#portfolio img {
+  width: 250px;
+  height: 130px;
+}
+/*END: #portfolio specific styles*/
+
+/*START: #contact specific styles*/
+/*Section: #contact*/
+.footer {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  /*background-color: pink;*/
+}
+
+.icon-heigth-footer img {
+  position: relative;
+  display: inline;
+  vertical-align: bottom;
+  width: 10px;
+  height: 15px;
+  padding-right: 6px;
+  margin: 5px 0 0 0;
+}
+
+.icon-heigth-footer figcaption {
+  display: inline;
+  margin: 5px 0 0 0;
+  vertical-align: bottom;
+  color: #515151;
+  font-size: 12px;
+}
+
+.icon-width-footer img {
+  position: relative;
+  display: inline;
+  vertical-align: center;
+  width: 15px;
+  height: 10px;
+  padding-right: 5px;
+  padding-top: 3px;
+  margin: 5px 0 0 0;
+}
+
+.icon-width-footer figcaption {
+  display: inline;
+  vertical-align: bottom;
+  margin: 5px 0 0 0;
+  color: #515151;
+  font-size: 12px;
+  text-align: left;
+}
+/*END: #contact specific styles*/
