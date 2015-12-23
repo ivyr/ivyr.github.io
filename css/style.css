@@ -1,0 +1,24 @@
+.tech-logo {
+  width: 80px;
+  height: 90px;
+  margin: 10px;
+}
+
+.tech-logo-wide {
+  width: 100px;
+  height: 60px;
+  margin: 10px;
+}
+
+figure {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+figcaption {
+  border: 1px solid rgba(124, 124, 128, 0.53);
+}
+
+.divider {
+  height: 30px;
+}
