@@ -27,5 +27,6 @@
 }
 
 .portfolio-item img {
-  height: 215px;
+  /*height: 400px;*/
+  max-width:400px;
 }
